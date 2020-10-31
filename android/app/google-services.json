@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "80490662779",
+    "firebase_url": "https://chatterbase-e0e93.firebaseio.com",
+    "project_id": "chatterbase-e0e93",
+    "storage_bucket": "chatterbase-e0e93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80490662779:android:636a2a5285418aba7fcbde",
+        "android_client_info": {
+          "package_name": "com.example.ChatterBase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "80490662779-saacv2365qgshngvfflsbcb7pp5uqbbn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmgib-sGP7PcYU_v0RsevGKj7jb6RyNTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "80490662779-saacv2365qgshngvfflsbcb7pp5uqbbn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -25,7 +25,10 @@ class _UserImagePickerState extends State<UserImagePicker> {
 
   _imgFromCamera() async {
     final image = await ImagePicker.pickImage(
-        source: ImageSource.camera, imageQuality: 50);
+      source: ImageSource.camera,
+      imageQuality: 50,
+      maxWidth: 150,
+    );
 
     setState(() {
       _pickedImage = image;
@@ -35,7 +38,10 @@ class _UserImagePickerState extends State<UserImagePicker> {
 
   _imgFromGallery() async {
     final image = await ImagePicker.pickImage(
-        source: ImageSource.gallery, imageQuality: 50);
+      source: ImageSource.gallery,
+      imageQuality: 50,
+      maxWidth: 150,
+    );
 
     setState(() {
       _pickedImage = image;

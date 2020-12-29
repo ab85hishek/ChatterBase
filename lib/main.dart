@@ -1,5 +1,6 @@
 import 'package:ChatterBase/screens/auth_screen.dart';
 import 'package:ChatterBase/screens/chat_screen.dart';
+import 'package:ChatterBase/screens/splash_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Chatter Base',
       theme: ThemeData(
         primarySwatch: Colors.pink,
@@ -29,6 +31,10 @@ class MyApp extends StatelessWidget {
       home: StreamBuilder(
         stream: FirebaseAuth.instance.onAuthStateChanged,
         builder: (ctx, userSnapshot) {
+          if (userSnapshot.connectionState == ConnectionState.waiting) {
+            return SplashScreen();
+          }
+
           if (userSnapshot.hasData) {
             return ChatScreen();
           }

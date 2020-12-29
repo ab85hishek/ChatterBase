@@ -13,6 +13,7 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   //for ios push notifications. It has nothing to do with android messaging.
   void initState() {
+    super.initState();
     final fbm = FirebaseMessaging();
     fbm.requestNotificationPermissions();
     fbm.configure(
@@ -30,7 +31,6 @@ class _ChatScreenState extends State<ChatScreen> {
       },
     );
     fbm.subscribeToTopic('chat');
-    super.initState();
   }
   //....
 
@@ -40,6 +40,7 @@ class _ChatScreenState extends State<ChatScreen> {
         title: Text('ChatterBase'),
         actions: [
           DropdownButton(
+            underline: Container(),
             icon: Icon(
               Icons.more_vert,
               color: Theme.of(context).primaryIconTheme.color,
